@@ -4,19 +4,23 @@
 
 {% block content %}
 
+
+
 <div class="row justify-content-center my-3">
   <div class="col-5">
     <img src="{% static 'portfolio/anji.jpg' %}" class="img-fluid">
+    <style>img-opacity:0.5</style>
   </div>
 </div>
 
 <div class="row justify-content-center mb-3">
   <div class="col-md-9 text-center">
-    <h5>Anjali, a cute little girl with an adorable smile in her early 20s! 😊 Loves reading, learning, coding, playing and TED.<br>She is an ENFJ.</h5>
+    <h5 style="color:darkslategray;">Anjali, a cute little girl with an adorable smile in her early 20s! 😊 Loves reading, learning, coding, playing and TED.<br>She is an ENFJ.</h5>
   </div>
 </div>
 
-<h3 class="mt-5">My Portfolio</h3>
+
+<h3 class="mt-5" style="color:rgb(6, 148, 158);">My Portfolio</h3>
 <hr>
 <div class="row">
   {% for project in projects %}
@@ -29,9 +33,9 @@
     {% else %}
 
     <img src="{{ project.image.url }}" class="img-fluid mb-2">
-    {% endif %}
-    <h4>{{ project.title }}</h4>
-    <p>{{ project.discription }}</p>
+    {% endif %}<br>
+    <h4 style="color:rgb(40, 71, 71);">{{ project.title }}</h4>
+    <p style="color:darkslategrey;">{{ project.discription }}</p>
 
   </div>
   {% endfor %}
